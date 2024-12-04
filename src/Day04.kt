@@ -31,11 +31,11 @@ fun main() {
 
     fun part1(input: List<String>): Int {
         val matrix = input.toMatrix()
-        return matrix.mapIndexed { x, line ->
+        return matrix.sumOfIndexed { x, line ->
             line.sumOfIndexed { y, _ ->
                 offsets.count { matrix.checkLine(x, y, it) }
             }
-        }.sum()
+        }
     }
 
     val opposites = listOf(
