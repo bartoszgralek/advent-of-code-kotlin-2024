@@ -13,10 +13,6 @@ fun main() {
         1 to -1
     )
 
-    fun List<String>.toMatrix(): Array<CharArray> {
-        return this.map { it.toCharArray() }.toTypedArray()
-    }
-
     fun Array<CharArray>.move(x: Int, y: Int, offset: Pair<Int, Int>): Char {
         return this[x - offset.first][y - offset.second]
     }
