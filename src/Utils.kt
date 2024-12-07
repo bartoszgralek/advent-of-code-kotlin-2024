@@ -2,6 +2,7 @@ import java.math.BigInteger
 import java.security.MessageDigest
 import kotlin.io.path.Path
 import kotlin.io.path.readText
+import kotlin.math.pow
 
 /**
  * Reads lines from the given input txt file.
@@ -40,3 +41,5 @@ private fun <T : Number> addNumbers(a: T, b: T): T {
         else -> throw IllegalArgumentException("Unsupported type")
     }
 }
+
+infix fun Int.`**`(exponent: Int): Int = toDouble().pow(exponent).toInt()

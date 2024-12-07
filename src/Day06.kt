@@ -13,11 +13,11 @@ data class Guard(val startPosition: Pair<Int, Int>, val startIcon: Char) {
         270 to Pair(0, -1)
     )
 
-    var currentPosition = startPosition
-    var currentAngle = possiblePositions[startIcon] ?: throw WrongStartIconException()
+    private var currentPosition = startPosition
+    private var currentAngle = possiblePositions[startIcon] ?: throw WrongStartIconException()
 
     var visited = mutableListOf(startPosition)
-    var visitedWithOrientation = mutableSetOf(startPosition to currentAngle)
+    private var visitedWithOrientation = mutableSetOf(startPosition to currentAngle)
 
     fun turnRight() {
         currentAngle = (currentAngle + 90).mod(360)
