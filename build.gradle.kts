@@ -2,6 +2,10 @@ plugins {
     kotlin("jvm") version "2.1.0"
 }
 
+dependencies {
+    implementation("com.github.shiguruikai:combinatoricskt:1.6.0")
+}
+
 sourceSets {
     main {
         kotlin.srcDir("src")
